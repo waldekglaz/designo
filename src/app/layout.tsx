@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
-import Header from "@/_components/Header/Header";
-import MobileNav from "@/_components/MobileNav/MobileNav";
+import Header from "@/components/Header/Header";
+import MobileNav from "@/components/MobileNav/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 

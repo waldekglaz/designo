@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeaderProps {
   onClick: () => void;
@@ -9,12 +10,14 @@ interface HeaderProps {
 const Header = ({ onClick, isMenuOpen }: HeaderProps) => {
   return (
     <header className="px-4 py-6 flex justify-between items-center">
-      <Image
-        src="/assets/shared/desktop/logo-dark.png" // Route of the image file
-        height={27} // Desired size with correct aspect ratio
-        width={202} // Desired size with correct aspect ratio
-        alt="Designo logo"
-      />
+      <Link href="/">
+        <Image
+          src="/assets/shared/desktop/logo-dark.png" // Route of the image file
+          height={27} // Desired size with correct aspect ratio
+          width={202} // Desired size with correct aspect ratio
+          alt="Designo logo"
+        />
+      </Link>
       <button onClick={onClick}>
         {!isMenuOpen ? (
           <Image

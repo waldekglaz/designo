@@ -5,12 +5,13 @@ import Link from "next/link";
 interface HeaderProps {
   onClick: () => void;
   isMenuOpen: boolean;
+  onLinkClick: () => void;
 }
 
-const Header = ({ onClick, isMenuOpen }: HeaderProps) => {
+const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
   return (
     <header className="px-4 py-6 flex justify-between items-center">
-      <Link href="/">
+      <Link href="/" onClick={onLinkClick}>
         <Image
           src="/assets/shared/desktop/logo-dark.png" // Route of the image file
           height={27} // Desired size with correct aspect ratio

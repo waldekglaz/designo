@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-hero-pattern bg-no-repeat bg-orange text-white pt-20 px-4 text-center">
+    <div className="bg-hero-pattern bg-no-repeat bg-orange text-white pt-20 px-4 text-center max-h-[620px] overflow-hidden">
       <h1 className="text-3xl mb-4">
         Award-winning custom designs and digital branding solutions
       </h1>

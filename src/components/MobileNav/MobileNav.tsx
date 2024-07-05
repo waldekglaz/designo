@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { menuItems } from "@/_constants/const";
+import { menuItems } from "@/constants/const";
 
 interface MobileNavProps {
   isMenuOpen: boolean;

@@ -5,6 +5,7 @@ import "./globals.css";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header/Header";
 import MobileNav from "@/components/MobileNav/MobileNav";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,9 +41,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header onClick={toggleMenu} isMenuOpen={isMenuOpen} />
+        <Header
+          onClick={toggleMenu}
+          isMenuOpen={isMenuOpen}
+          onLinkClick={handleLinkClick}
+        />
         <MobileNav isMenuOpen={isMenuOpen} onClick={handleLinkClick} />
         {children}
+        <Footer />
       </body>
     </html>
   );

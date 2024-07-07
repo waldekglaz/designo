@@ -32,7 +32,14 @@ const IllustratedCard = ({
       />
       <h2 className="text-xl uppercase tracking-widest mb-8">{title}</h2>
       {text && <p>{text}</p>}
-      {btn && <Link href={link}>{btnText}</Link>}
+      {btn && (
+        <Link
+          href={link}
+          className="bg-orange text-white uppercase p-3 rounded-lg transition-colors hover:bg-white hover:text-orange"
+        >
+          {btnText}
+        </Link>
+      )}
     </div>
   );
 };

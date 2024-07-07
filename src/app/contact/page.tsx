@@ -54,7 +54,7 @@ const Company = () => {
                 id="name"
                 name="name"
                 required
-                className="bg-orange flex-grow"
+                className="bg-transparent flex-grow"
               />
             </div>
             <div className="w-full py-2 border-b flex justify-between gap-2">
@@ -64,7 +64,7 @@ const Company = () => {
                 id="email"
                 name="email"
                 required
-                className="bg-orange flex-grow"
+                className="bg-transparent flex-grow"
               />
             </div>
             <div className="w-full py-2 border-b flex justify-between gap-2">
@@ -74,7 +74,7 @@ const Company = () => {
                 id="phone"
                 name="phone"
                 required
-                className="bg-orange flex-grow"
+                className="bg-transparent flex-grow"
               />
             </div>
             <div className="w-full pt-2 pb-12 border-b flex justify-between gap-2">
@@ -83,7 +83,7 @@ const Company = () => {
                 id="message"
                 name="message"
                 required
-                className="bg-orange flex-grow"
+                className="bg-transparent flex-grow"
               />
             </div>
           </div>

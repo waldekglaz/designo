@@ -32,7 +32,7 @@ const Footer = () => {
         <nav>
           <ul>
             {menuItems.map((item) => (
-              <FooterNavItem item={item} />
+              <FooterNavItem item={item} key={item.href} />
             ))}
           </ul>
         </nav>

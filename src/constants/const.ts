@@ -154,6 +154,7 @@ export const locations = [
     email: "M : contact@designo.co",
     href: "/locations/#canada",
     img: "/assets/shared/desktop/illustration-canada.svg",
+    position: [43.644025, -79.394396],
   },
   {
     name: "Australia",
@@ -164,6 +165,7 @@ export const locations = [
     email: "M : contact@designo.co",
     href: "/locations/#australia",
     img: "/assets/shared/desktop/illustration-australia.svg",
+    position: [-35.31, 149.12],
   },
   {
     name: "United Kingdom",
@@ -174,5 +176,6 @@ export const locations = [
     email: "M : contact@designo.co",
     href: "/locations/#united-kingdom",
     img: "/assets/shared/desktop/illustration-united-kingdom.svg",
+    position: [51.661535, -3.843195],
   },
 ];

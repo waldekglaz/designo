@@ -99,37 +99,37 @@ export const services = [
   {
     title: "App Design",
     text: "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
-    bgImage: "/assets/home/desktop/image-app-design.jpg",
+    bgImage: "/assets/app-design/desktop/image-app-design.jpg",
     href: "/services/appdesign",
     projects: [
       {
         title: "Airfilter",
         text: "Solving the problem of poor indoor air quality by filtering the air",
-        bgImage: "/assets/home/desktop/image-airfilter.jpg",
+        bgImage: "/assets/app-design/desktop/image-airfilter.jpg",
         href: "/services/appdesign/airfilter",
       },
       {
         title: "Eyecam",
         text: "Product that lets you edit your favorite photos and videos at any time",
-        bgImage: "/assets/home/desktop/image-eyecam.jpg",
+        bgImage: "/assets/app-design/desktop/image-eyecam.jpg",
         href: "/services/appdesign/eyecam",
       },
       {
         title: "Faceit",
         text: "Get to meet your favorite internet superstar with the faceit app",
-        bgImage: "/assets/home/desktop/image-faceit.jpg",
+        bgImage: "/assets/app-design/desktop/image-faceit.jpg",
         href: "/services/appdesign/faceit",
       },
       {
         title: "Todo",
         text: "A todo app that features cloud sync with light and dark mode",
-        bgImage: "/assets/home/desktop/image-todo.jpg",
+        bgImage: "/assets/app-design/desktop/image-todo.jpg",
         href: "/services/appdesign/todo",
       },
       {
         title: "Loopstudios",
         text: "A VR experience app made for Loopstudios",
-        bgImage: "/assets/home/desktop/image-loopstudios.jpg",
+        bgImage: "/assets/app-design/desktop/image-loopstudios.jpg",
         href: "/services/appdesign/loopstudios",
       },
     ],
@@ -137,25 +137,25 @@ export const services = [
   {
     title: "Graphic Design",
     text: "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
-    bgImage: "/assets/home/desktop/image-graphic-design.jpg",
+    bgImage: "/assets/graphic-design/desktop/image-graphic-design.jpg",
     href: "/services/graphicdesign",
     projects: [
       {
         title: "Tim Brown",
         text: "A book cover designed for Tim Brown’s new release, ‘How to Avoid a Climate Disaster’",
-        bgImage: "/assets/home/desktop/image-graphic-design.jpg",
+        bgImage: "/assets/graphic-design/desktop/image-change.jpg",
         href: "/services/graphicdesign/timbrown",
       },
       {
         title: "Boxed Water",
         text: "A simple packaging concept made for Boxed Water",
-        bgImage: "/assets/home/desktop/image-boxed-water.jpg",
+        bgImage: "/assets/graphic-design/desktop/image-boxed-water.jpg",
         href: "/services/graphicdesign/boxedwater",
       },
       {
         title: "Science!",
         text: "A poster made in collaboration with the Federal Art Project",
-        bgImage: "/assets/home/desktop/image-science.jpg",
+        bgImage: "/assets/graphic-design/desktop/image-science.jpg",
         href: "/services/graphicdesign/science",
       },
     ],

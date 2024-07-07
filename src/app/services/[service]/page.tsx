@@ -1,22 +1,24 @@
-"use client";
 import React from "react";
-import HeroSecondary from "../../../components/HeroSecondary/HeroSecondary";
-import { usePathname } from "next/navigation";
-import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
-import { projectItems } from "@/constants/const";
 import { services } from "@/constants/const";
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import HeroSecondary from "@/components/HeroSecondary/HeroSecondary";
+import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
+import { projectItems } from "@/constants/const";
 
-const page = () => {
-  const pathname = usePathname();
-  const service = services.find((service) => service.href === pathname);
+const ServicePage = ({ params }: { params: { service: string } }) => {
+  console.log(params);
+  const service = services.find((service) =>
+    service.href.includes(params.service)
+  );
 
   return (
     <div>
-      <HeroSecondary
-        title="Web Design"
-        text="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-      />
+      {service && (
+        <HeroSecondary
+          title={service.title}
+          text="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+        />
+      )}
       <section>
         {service?.projects.map((project) => (
           <ServiceCard
@@ -30,7 +32,7 @@ const page = () => {
       </section>
       <section className="pb-40 px-6">
         {projectItems.map((project) => {
-          if (project.href === pathname) {
+          if (project.href === service?.href) {
             return;
           } else {
             return (
@@ -48,4 +50,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ServicePage;

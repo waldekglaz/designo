@@ -6,9 +6,10 @@ interface IllustratedCardProps {
   src: string;
   alt: string;
   title: string;
-  text: string;
+  text?: string;
   btn?: boolean;
   link?: string | React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  btnText?: string;
 }
 
 const IllustratedCard = ({
@@ -18,13 +19,14 @@ const IllustratedCard = ({
   text,
   btn,
   link = "", // Provide a default value for the link prop
+  btnText,
 }: IllustratedCardProps) => {
   return (
     <div className="flex flex-col items-center text-center px-6 mb-20">
       <Image src={src} width={202} height={202} alt={alt} />
       <h2 className="text-xl uppercase tracking-widest mb-8">{title}</h2>
-      <p>{text}</p>
-      {btn && <Link href={link}>Learn More</Link>}
+      {text && <p>{text}</p>}
+      {btn && <Link href={link}>{btnText}</Link>}
     </div>
   );
 };

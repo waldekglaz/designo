@@ -3,7 +3,6 @@ import { services } from "@/constants/const";
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import HeroSecondary from "@/components/HeroSecondary/HeroSecondary";
 import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
-import { projectItems } from "@/constants/const";
 
 const ServicePage = ({ params }: { params: { service: string } }) => {
   console.log(params.service);

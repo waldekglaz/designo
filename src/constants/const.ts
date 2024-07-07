@@ -143,3 +143,36 @@ export const services = [
     ],
   },
 ];
+
+export const locations = [
+  {
+    name: "Canada",
+    address: "Designo Central Office",
+    street: "3886 Wellington Street",
+    city: "Toronto, Ontario M9C 3J5",
+    phone: "P : +1 253-863-8967",
+    email: "M : contact@designo.co",
+    href: "/locations/#canada",
+    img: "/assets/shared/desktop/illustration-canada.svg",
+  },
+  {
+    name: "Australia",
+    address: "Designo AU Office",
+    street: "19 Balonne Street",
+    city: "New South Wales 2443",
+    phone: "P : (02) 6720 9092",
+    email: "M : contact@designo.co",
+    href: "/locations/#australia",
+    img: "/assets/shared/desktop/illustration-australia.svg",
+  },
+  {
+    name: "United Kingdom",
+    address: "Designo UK Office",
+    street: "13 Colorado Way",
+    city: "Rhyd-y-fro SA8 9GA",
+    phone: "P : 078 3115 1400",
+    email: "M : contact@designo.co",
+    href: "/locations/#united-kingdom",
+    img: "/assets/shared/desktop/illustration-united-kingdom.svg",
+  },
+];

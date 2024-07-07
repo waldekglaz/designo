@@ -1,12 +1,16 @@
 import { locations } from "@/constants/const";
-import MapCard from "@/components/MapCard/MapCard";
 import { LatLngTuple } from "leaflet";
+import dynamic from "next/dynamic";
+
+const DynamicMapCard = dynamic(() => import("@/components/MapCard/MapCard"), {
+  ssr: false,
+});
 
 const Locations = () => {
   return (
     <div>
       {locations.map((location) => (
-        <MapCard
+        <DynamicMapCard
           key={location.name}
           position={[location.position[0], location.position[1]] as LatLngTuple}
           id={location.href.split("#")[1]}

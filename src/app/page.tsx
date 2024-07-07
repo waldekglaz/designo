@@ -8,17 +8,31 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className="pt-28  px-4 mb-28">
-        {services.map((item) => (
-          <ProjectsCard
-            title={item.title}
-            href={item.href}
-            bgImage={item.bgImage}
-            key={item.title}
-          />
-        ))}
+      <section className="pt-28  px-4 mb-28 xl:w-[1111px] mx-auto xl:px-0 xl:grid grid-cols-2 grid-rows-2 gap-6 ">
+        {services.map((item, index) => {
+          let gridClass = "";
+          if (index === 0) {
+            gridClass =
+              "col-span-1 row-span-2 xl:min-h-[640px] xl:flex xl:flex-col xl:items-center xl:justify-center"; // First item takes both columns and two rows
+          } else if (index === 1) {
+            gridClass =
+              "row-span-1 xl:flex xl:flex-col xl:items-center xl:justify-center"; // Second item takes one column (by default) and one row
+          } else if (index === 2) {
+            gridClass =
+              "row-span-1 xl:flex xl:flex-col xl:items-center xl:justify-center"; // Third item takes one column (by default) and one row
+          }
+          return (
+            <ProjectsCard
+              title={item.title}
+              href={item.href}
+              bgImage={item.bgImage}
+              key={item.title}
+              className={gridClass}
+            />
+          );
+        })}
       </section>
-      <section>
+      <section className="xl:w-[1111px]">
         <IllustratedCard
           src="/assets/home/desktop/illustration-passionate.svg"
           title="passionate"

@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
   return (
-    <header className="px-4 py-6 flex justify-between items-center">
+    <header className="px-4 py-6 flex justify-between items-center md:pt-16 md:px-10 lg:w-[94vw] lg:mx-auto xl:w-[1111px]">
       <Link href="/" onClick={onLinkClick}>
         <Image
           src="/assets/shared/desktop/logo-dark.png" // Route of the image file
@@ -19,7 +19,7 @@ const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
           alt="Designo logo"
         />
       </Link>
-      <button onClick={onClick}>
+      <button onClick={onClick} className="md:hidden">
         {!isMenuOpen ? (
           <Image
             src="/assets/shared/mobile/icon-hamburger.svg"
@@ -36,6 +36,25 @@ const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
           />
         )}
       </button>
+      <nav className="hidden md:block">
+        <ul className="flex space-x-8">
+          <li>
+            <Link href="/company" onClick={onLinkClick}>
+              Our Company
+            </Link>
+          </li>
+          <li>
+            <Link href="/locations" onClick={onLinkClick}>
+              Locations
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={onLinkClick}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };

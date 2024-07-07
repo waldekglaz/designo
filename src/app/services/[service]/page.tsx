@@ -6,19 +6,14 @@ import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
 import { projectItems } from "@/constants/const";
 
 const ServicePage = ({ params }: { params: { service: string } }) => {
-  console.log(params);
+  console.log(params.service);
   const service = services.find((service) =>
     service.href.includes(params.service)
   );
 
   return (
     <div>
-      {service && (
-        <HeroSecondary
-          title={service.title}
-          text="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-        />
-      )}
+      {service && <HeroSecondary title={service.title} text={service.text} />}
       <section>
         {service?.projects.map((project) => (
           <ServiceCard
@@ -31,14 +26,14 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
         ))}
       </section>
       <section className="pb-40 px-6">
-        {projectItems.map((project) => {
+        {services.map((project) => {
           if (project.href === service?.href) {
             return;
           } else {
             return (
               <ProjectsCard
-                key={project.name}
-                title={project.name}
+                key={project.title}
+                title={project.title}
                 bgImage={project.bgImage}
                 href={project.href}
               />

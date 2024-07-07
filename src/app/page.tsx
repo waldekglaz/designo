@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Hero from "@/components/Hero/Hero";
 import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
-import { projectItems } from "@/constants/const";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
+import { services } from "@/constants/const";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <section className="pt-28  px-4 mb-28">
-        {projectItems.map((item) => (
+        {services.map((item) => (
           <ProjectsCard
-            title={item.name}
+            title={item.title}
             href={item.href}
             bgImage={item.bgImage}
-            key={item.name}
+            key={item.title}
           />
         ))}
       </section>

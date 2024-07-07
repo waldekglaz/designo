@@ -1,13 +1,14 @@
 "use client";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Jost } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header/Header";
 import MobileNav from "@/components/MobileNav/MobileNav";
 import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
 //   title: "Designo",
@@ -40,7 +41,7 @@ export default function RootLayout({
   }, [isMenuOpen]); // Depend on isMenuOpen
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jost.className}>
         <Header
           onClick={toggleMenu}
           isMenuOpen={isMenuOpen}

@@ -13,7 +13,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
   return (
     <div>
       {service && <HeroSecondary title={service.title} text={service.text} />}
-      <section>
+      <section className="py-24">
         {service?.projects.map((project) => (
           <ServiceCard
             key={project.title}
@@ -24,7 +24,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
           />
         ))}
       </section>
-      <section className="pb-40 px-6">
+      <section className=" px-6">
         {services.map((project) => {
           if (project.href === service?.href) {
             return;

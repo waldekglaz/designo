@@ -7,7 +7,7 @@ import Socials from "../Socials/Socials";
 
 const Footer = () => {
   return (
-    <footer className="relative">
+    <footer className="relative mt-56">
       <div className="bg-footer-pattern bg-no-repeat bg-center bg-orange absolute top-[-20%] text-white py-10 px-4 text-center rounded-lg left-1/2 transform -translate-x-1/2 w-[90%]">
         <h2 className="text-3xl mb-4">Let's talk about your project</h2>
         <p className="text-sm leading-relaxed mb-6">

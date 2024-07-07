@@ -18,7 +18,7 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className="pb-48">
+      <section>
         <IllustratedCard
           src="/assets/home/desktop/illustration-passionate.svg"
           title="passionate"

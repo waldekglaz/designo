@@ -22,8 +22,14 @@ const IllustratedCard = ({
   btnText,
 }: IllustratedCardProps) => {
   return (
-    <div className="flex flex-col items-center text-center px-6 mb-20">
-      <Image src={src} width={202} height={202} alt={alt} />
+    <div className="flex flex-col items-center text-center px-6 mb-20 ">
+      <Image
+        className="bg-hero-pattern bg-no-repeat bg-contain bg-center"
+        src={src}
+        width={202}
+        height={202}
+        alt={alt}
+      />
       <h2 className="text-xl uppercase tracking-widest mb-8">{title}</h2>
       {text && <p>{text}</p>}
       {btn && <Link href={link}>{btnText}</Link>}

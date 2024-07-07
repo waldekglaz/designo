@@ -32,7 +32,7 @@ export default function Home() {
           );
         })}
       </section>
-      <section className="xl:w-[1111px]">
+      <section className="xl:w-[1111px] mx-auto xl:flex">
         <IllustratedCard
           src="/assets/home/desktop/illustration-passionate.svg"
           title="passionate"

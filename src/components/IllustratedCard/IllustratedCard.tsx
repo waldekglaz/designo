@@ -22,7 +22,7 @@ const IllustratedCard = ({
   btnText,
 }: IllustratedCardProps) => {
   return (
-    <div className="flex flex-col items-center text-center px-6 mb-20 ">
+    <div className="flex flex-col items-center text-center px-6 mb-20 md:flex-row md:text-left md:gap-12 xl:flex-col xl:text-center">
       <Image
         className="bg-hero-pattern bg-no-repeat bg-contain bg-center"
         src={src}
@@ -30,16 +30,18 @@ const IllustratedCard = ({
         height={202}
         alt={alt}
       />
-      <h2 className="text-xl uppercase tracking-widest mb-8">{title}</h2>
-      {text && <p>{text}</p>}
-      {btn && (
-        <Link
-          href={link}
-          className="bg-orange text-white uppercase p-3 rounded-lg transition-colors hover:bg-white hover:text-orange"
-        >
-          {btnText}
-        </Link>
-      )}
+      <div>
+        <h2 className="text-xl uppercase tracking-widest mb-8">{title}</h2>
+        {text && <p>{text}</p>}
+        {btn && (
+          <Link
+            href={link}
+            className="bg-orange text-white uppercase p-3 rounded-lg transition-colors hover:bg-white hover:text-orange"
+          >
+            {btnText}
+          </Link>
+        )}
+      </div>
     </div>
   );
 };

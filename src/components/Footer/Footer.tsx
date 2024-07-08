@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="px-4 bg-[#1D1C1E] pt-60 pb-16 text-white text-center xl:px-40 xl:w-[1440px] xl:mx-auto">
         <Link href="/">
           <Image
-            className="mx-auto xl:ml-0"
+            className="mx-auto md:ml-0"
             src="/assets/shared/desktop/logo-light.png"
             width={202}
             height={30}
@@ -34,13 +34,13 @@ const Footer = () => {
         </Link>
         <hr className=" my-8 border border-slate-800" />
         <nav>
-          <ul className="xl:flex xl:gap-11 xl:absolute xl:top-60 left-[62%]">
+          <ul className="md:flex md:gap-11 md:absolute md:top-60 left-[49%]">
             {menuItems.map((item) => (
               <FooterNavItem item={item} key={item.href} />
             ))}
           </ul>
         </nav>
-        <div className=" xl:flex xl:justify-between items-end xl:text-left">
+        <div className=" md:flex md:justify-between items-end md:text-left">
           <address className="mt-8 leading-7 text-sm text-gray-400 not-italic ">
             <h3 className="font-bold">Designo Central Office</h3>
             3886 Wellington Street <br />

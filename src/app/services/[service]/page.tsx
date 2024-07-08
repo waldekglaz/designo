@@ -13,7 +13,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
   return (
     <div>
       {service && <HeroSecondary title={service.title} text={service.text} />}
-      <section className="py-24">
+      <section className="pt-24 pb-12">
         {service?.projects.map((project) => (
           <ServiceCard
             key={project.title}

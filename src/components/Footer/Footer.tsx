@@ -4,6 +4,7 @@ import { menuItems } from "@/constants/const";
 import Link from "next/link";
 import FooterNavItem from "../FooterNavItem/FooterNavItem";
 import Socials from "../Socials/Socials";
+import Button from "../Button/Button";
 
 const Footer = () => {
   return (
@@ -19,12 +20,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <Link
-          href="/contact"
-          className="bg-white rounded-lg text-slate-900 text-sm py-4 px-5 uppercase"
-        >
-          Get in touch
-        </Link>
+        <Button text="Get in touch" href="/contact" />
       </div>
       <div className="px-4 bg-[#1D1C1E] pt-60 pb-16 text-white text-center xl:px-40 xl:w-[1440px] xl:mx-auto">
         <Link href="/">
@@ -44,8 +40,8 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
-        <div className=" xl:flex xl:justify-between items-end">
-          <address className="mt-8 leading-7 text-sm text-gray-400 not-italic">
+        <div className=" xl:flex xl:justify-between items-end xl:text-left">
+          <address className="mt-8 leading-7 text-sm text-gray-400 not-italic ">
             <h3 className="font-bold">Designo Central Office</h3>
             3886 Wellington Street <br />
             Toronto, Ontario M9C 3J5

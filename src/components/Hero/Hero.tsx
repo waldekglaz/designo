@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button/Button";
 
 const Hero = () => {
   return (
@@ -14,12 +15,7 @@ const Hero = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Link
-          href="/services/webdesign"
-          className="bg-white rounded-lg text-slate-900 text-sm py-4 px-6 uppercase xl:ml-0 hover:bg-[#ffad98] hover:text-white transition-colors"
-        >
-          Learn More
-        </Link>
+        <Button text="learn more" href="/services/webdesign" />
       </div>
 
       <Image

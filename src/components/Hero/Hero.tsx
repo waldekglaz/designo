@@ -15,18 +15,18 @@ const Hero = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Button text="learn more" href="/services/webdesign" />
+        <Button text="learn more3" href="services/webdesign" />
       </div>
 
       <Image
-        className="mx-auto mt-[-50px] md:hidden"
+        className="mx-auto mt-3  md:hidden"
         src="/assets/home/desktop/image-hero-phone.png"
-        width={390}
-        height={673}
+        width={280}
+        height={573}
         alt="hero phone"
       />
       <Image
-        className="mx-auto mt-[-50px] md:block hidden xl:hidden"
+        className="mx-auto  md:block hidden xl:hidden"
         src="/assets/home/desktop/image-hero-phone.png"
         width={590}
         height={673}

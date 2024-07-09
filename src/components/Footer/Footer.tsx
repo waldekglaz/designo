@@ -22,7 +22,7 @@ const Footer = () => {
 
         <Button text="Get in touch" href="/contact" />
       </div>
-      <div className="px-4 bg-[#1D1C1E] pt-60 pb-16 text-white text-center xl:px-40 xl:w-[1440px] xl:mx-auto">
+      <div className="px-4 bg-[#1D1C1E] pt-60 pb-16 text-white text-center md:px-11 xl:px-40 xl:w-[1440px] xl:mx-auto">
         <Link href="/">
           <Image
             className="mx-auto md:ml-0"

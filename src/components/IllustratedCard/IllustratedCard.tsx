@@ -10,6 +10,7 @@ interface IllustratedCardProps {
   btn?: boolean;
   link?: string | React.AnchorHTMLAttributes<HTMLAnchorElement>;
   btnText?: string;
+  noText?: boolean;
 }
 
 const IllustratedCard = ({
@@ -20,9 +21,14 @@ const IllustratedCard = ({
   btn,
   link = "", // Provide a default value for the link prop
   btnText,
+  noText,
 }: IllustratedCardProps) => {
   return (
-    <div className="flex flex-col items-center text-center px-6 mb-20 md:flex-row md:text-left md:gap-12 xl:flex-col xl:text-center">
+    <div
+      className={`flex flex-col items-center text-center px-6 mb-20   md:gap-12 xl:flex-col xl:text-center ${
+        !noText && "md:flex-row md:text-left"
+      }`}
+    >
       <Image
         className="bg-hero-pattern bg-no-repeat bg-contain bg-center"
         src={src}

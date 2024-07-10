@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
   return (
-    <header className="px-4 py-6 flex justify-between items-center md:pt-16 md:px-10 lg:w-[1111px] lg:mx-auto lg:px-0">
+    <header className="px-4 py-6 flex justify-between items-center md:pt-16 md:px-10 lg:px-10 lg:mx-auto xl:w-[1111px] xl:px-0">
       <Link href="/" onClick={onLinkClick}>
         <Image
           src="/assets/shared/desktop/logo-dark.png" // Route of the image file

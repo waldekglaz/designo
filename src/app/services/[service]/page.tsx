@@ -13,7 +13,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
   return (
     <div>
       {service && <HeroSecondary title={service.title} text={service.text} />}
-      <section className="pt-24 pb-12">
+      <section className="pt-24 pb-12 lg:flex lg:flex-wrap lg:justify-start lg:max-w-[1111px] mx-auto gap-[30px] lg:pt-0">
         {service?.projects.map((project) => (
           <ServiceCard
             key={project.title}
@@ -24,7 +24,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
           />
         ))}
       </section>
-      <section className=" px-6">
+      <section className=" max-w-[1111px] mx-auto">
         {services.map((project) => {
           if (project.href === service?.href) {
             return;

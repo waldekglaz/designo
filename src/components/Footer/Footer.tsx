@@ -34,7 +34,7 @@ const Footer = () => {
         </Link>
         <hr className=" my-8 border border-slate-800" />
         <nav>
-          <ul className="md:flex md:gap-11 md:absolute md:top-60 left-[49%]">
+          <ul className="md:flex md:gap-11 md:absolute md:top-60 left-[49%] lg:left-[60%]">
             {menuItems.map((item) => (
               <FooterNavItem item={item} key={item.href} />
             ))}

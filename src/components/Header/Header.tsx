@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { menuItems } from "@/constants/const";
 
 interface HeaderProps {
   onClick: () => void;
@@ -10,7 +11,7 @@ interface HeaderProps {
 
 const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
   return (
-    <header className="px-4 py-6 flex justify-between items-center md:pt-16 md:px-10 lg:px-10 lg:mx-auto xl:w-[1111px] xl:px-0">
+    <header className="px-4 py-6 flex justify-between items-center md:py-16 md:px-10 lg:px-10 lg:mx-auto xl:w-[1111px] xl:px-0">
       <Link href="/" onClick={onLinkClick}>
         <Image
           src="/assets/shared/desktop/logo-dark.png" // Route of the image file
@@ -38,21 +39,13 @@ const Header = ({ onClick, isMenuOpen, onLinkClick }: HeaderProps) => {
       </button>
       <nav className="hidden md:block">
         <ul className="flex space-x-8">
-          <li>
-            <Link href="/company" onClick={onLinkClick}>
-              Our Company
-            </Link>
-          </li>
-          <li>
-            <Link href="/locations" onClick={onLinkClick}>
-              Locations
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" onClick={onLinkClick}>
-              Contact
-            </Link>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.name}>
+              <Link href={item.href} onClick={onLinkClick}>
+                {item.name.toUpperCase()}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

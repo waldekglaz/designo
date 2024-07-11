@@ -15,12 +15,12 @@ const ServiceCard = ({ src, alt, title, text }: ServiceCardProps) => {
       href="#"
       className="group flex flex-col items-center text-center mb-8 rounded-lg md:flex-row md:justify-center md:w-full  lg:flex-col lg:max-w-[310px] xl:max-w-[350px] lg:mx-0 lg:px-0 "
     >
-      <div className="relative h-[320px] w-full basis-1/2 lg:min-h-320 lg:basis-auto">
+      <div className="relative min-h-[320px] w-full basis-1/2 lg:min-h-320 lg:basis-auto">
         <Image
           src={src}
           alt={alt}
           fill={true}
-          className="object-cover md:rounded-l-xl lg:rounded-r-xl lg:rounded-b-none"
+          className="object-cover rounded-t-xl md:rounded-l-xl lg:rounded-r-xl lg:rounded-b-none"
         />
       </div>
 

@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import HeroSecondary from "@/components/HeroSecondary/HeroSecondary";
-import TextCard from "@/components/TextCard/TextCard";
 import { locations } from "@/constants/const";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
 import HeroWithImage from "@/components/HeroWithImage/HeroWithImage";

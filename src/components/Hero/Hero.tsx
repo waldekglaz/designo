@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const Hero = () => {
   return (
-    <div className="bg-hero-pattern bg-contain bg-no-repeat bg-orange text-white pt-20 px-4 text-center max-h-[620px] overflow-hidden md:mx-6 md:rounded-lg md:px-14 md:max-h-[843px] md:pt-15 lg:w-[94vw] lg:mx-auto xl:w-[1440px] xl:flex xl:h-[640px] xl:pt-36 xl:text-left xl:px-40">
+    <div className="bg-hero-pattern bg-contain bg-no-repeat bg-orange text-white pt-20 px-4 text-center max-h-[620px] overflow-hidden md:mx-6 md:rounded-lg md:px-14 md:max-h-[843px] md:pt-15 lg:w-[94vw] lg:mx-auto xl:w-[1111px] xl:flex xl:h-[640px] xl:pt-36 xl:text-left xl:pl-40">
       <div>
         <h1 className="text-3xl mb-4 md:text-5xl max-w-[573px] mx-auto xl:text-left">
           Award-winning custom designs and digital branding solutions

@@ -8,8 +8,8 @@ const DynamicMapCard = dynamic(() => import("@/components/MapCard/MapCard"), {
 
 const Locations = () => {
   return (
-    <div>
-      {locations.map((location) => (
+    <div className="md:mx-10 xl:w-[1111px] xl:mx-auto">
+      {locations.map((location, index) => (
         <DynamicMapCard
           key={location.name}
           position={[location.position[0], location.position[1]] as LatLngTuple}
@@ -20,6 +20,7 @@ const Locations = () => {
           phone={location.phone}
           email={location.email}
           address={location.address}
+          textLeft={index % 2 === 0}
         />
       ))}
     </div>

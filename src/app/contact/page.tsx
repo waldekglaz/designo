@@ -12,9 +12,6 @@ const Company = () => {
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
-    // Log form data to check its contents
-    console.log("Form Data:", data);
-
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -36,17 +33,20 @@ const Company = () => {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col bg-orange gap-4 px-6 text-white text-center py-12 bg-hero-pattern bg-contain bg-top bg-no-repeat"
+        className="flex flex-col bg-orange gap-4 px-6 text-white text-center py-12 bg-hero-pattern bg-contain bg-top bg-no-repeat md:mx-10 md:rounded-xl lg:flex-row lg:text-left lg:px-24 lg:gap-24 xl:w-[1111px] xl:mx-auto"
       >
-        <h1 className="text-center text-3xl mb-6">Contact Us</h1>
-        <p className="text-base">
-          Ready to take it to the next level? Let’s talk about your project or
-          idea and find out how we can help your business grow. If you are
-          looking for unique digital experiences that’s relatable to your users,
-          drop us a line.
-        </p>
+        <div className="basis-1/2 lg:flex lg:flex-col justify-center">
+          <h1 className="text-center text-3xl mb-6 lg:text-left">Contact Us</h1>
+          <p className="text-base">
+            Ready to take it to the next level? Let’s talk about your project or
+            idea and find out how we can help your business grow. If you are
+            looking for unique digital experiences that’s relatable to your
+            users, drop us a line.
+          </p>
+        </div>
+
         {!isSuccessfullySent ? (
-          <div>
+          <div className="basis-1/2">
             <div className="w-full py-2 border-b flex justify-between gap-2">
               <label htmlFor="name">Name</label>
               <input
@@ -86,6 +86,14 @@ const Company = () => {
                 className="bg-transparent flex-grow"
               />
             </div>
+            {!isSuccessfullySent && (
+              <button
+                type="submit"
+                className="text-black bg-white w-40 block mx-auto py-3 rounded-lg mt-8 lg:mr-0 lg:ml-auto"
+              >
+                Submit
+              </button>
+            )}
           </div>
         ) : (
           <p className="text-3xl">
@@ -94,17 +102,8 @@ const Company = () => {
             We will get back to you soon.
           </p>
         )}
-
-        {!isSuccessfullySent && (
-          <button
-            type="submit"
-            className="text-black bg-white w-40 mx-auto py-3 rounded-lg mt-8"
-          >
-            Submit
-          </button>
-        )}
       </form>
-      <section className="pt-32">
+      <section className="pt-32 md:mx-10 lg:flex justify-between xl:w-[1111px] xl:mx-auto">
         {locations.map((location) => (
           <IllustratedCard
             key={location.name}
@@ -114,6 +113,7 @@ const Company = () => {
             btnText="See Location"
             alt={location.name}
             title={location.name}
+            noText={true}
           />
         ))}
       </section>

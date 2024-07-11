@@ -15,7 +15,7 @@ const Hero = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Button text="learn more3" href="services/webdesign" />
+        <Button text="learn more" href="services/webdesign" />
       </div>
 
       <Image

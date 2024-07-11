@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ServiceCardProps {
   src: string;
@@ -10,17 +11,27 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ src, alt, title, text }: ServiceCardProps) => {
   return (
-    <div className="flex flex-col items-center text-center px-6 mb-8 rounded-lg max-w-[327px] mx-auto md:flex-row md:justify-center md:max-w-max lg:flex-col lg:max-w-[310px] xl:max-w-[350px] lg:mx-0 lg:px-0">
-      <Image src={src} alt={alt} width={327} height={320} />
+    <Link
+      href="#"
+      className="group flex flex-col items-center text-center mb-8 rounded-lg md:flex-row md:justify-center md:w-full  lg:flex-col lg:max-w-[310px] xl:max-w-[350px] lg:mx-0 lg:px-0 "
+    >
+      <div className="relative h-[320px] w-full basis-1/2 lg:min-h-320 lg:basis-auto">
+        <Image
+          src={src}
+          alt={alt}
+          fill={true}
+          className="object-cover md:rounded-l-xl lg:rounded-r-xl lg:rounded-b-none"
+        />
+      </div>
 
-      <div className="bg-[#FDF3F0] p-8 rounded-b-xl md:px-8 md:py-28 md:max-h-[298px] md:rounded-none md:pr-11">
+      <div className="bg-[#FDF3F0] p-8 rounded-b-xl md:px-8 md:py-28  md:rounded-r-xl md:rounded-l-none md:pr-11 md:h-[320px] basis-1/2 lg:basis-auto lg:h-auto lg:py-8 lg:min-h-[200px] lg:rounded-s-xl lg:rounded-t-none group-hover:bg-orange group-hover:text-white transition-colors">
         {" "}
-        <h2 className="text-orange uppercase tracking-wides text-xl mb-4 ">
+        <h2 className="text-orange uppercase tracking-[5px] text-xl mb-4 group-hover:text-white transition-colors">
           {title}
         </h2>
         <p className="text-sm md:text-base">{text}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

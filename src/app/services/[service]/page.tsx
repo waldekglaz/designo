@@ -5,7 +5,6 @@ import HeroSecondary from "@/components/HeroSecondary/HeroSecondary";
 import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
 
 const ServicePage = ({ params }: { params: { service: string } }) => {
-  console.log(params.service);
   const service = services.find((service) =>
     service.href.includes(params.service)
   );
@@ -13,7 +12,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
   return (
     <div>
       {service && <HeroSecondary title={service.title} text={service.text} />}
-      <section className="mt-24 pb-12 md:mt-32 lg:flex lg:flex-wrap lg:justify-center xl:justify-start lg:max-w-[1111px] mx-auto gap-[30px] lg:pt-0">
+      <section className="mt-24 pb-12 md:mt-32 mx-6 md:mx-10 lg:flex lg:flex-wrap lg:justify-center xl:justify-start xl:max-w-[1111px] xl:mx-auto gap-[30px] lg:pt-0">
         {service?.projects.map((project) => (
           <ServiceCard
             key={project.title}
@@ -24,7 +23,7 @@ const ServicePage = ({ params }: { params: { service: string } }) => {
           />
         ))}
       </section>
-      <section className=" max-w-[1111px] mx-auto">
+      <section className="mx-6 md:mx-10  xl:mx-auto xl:max-w-[1111px]">
         {services.map((project) => {
           if (project.href === service?.href) {
             return;

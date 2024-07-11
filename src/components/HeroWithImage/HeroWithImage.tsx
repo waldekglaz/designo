@@ -19,9 +19,9 @@ const HeroWithImage = ({ title, text, src, alt }: HeroWithImageProps) => {
           className="md:rounded-t-xl object-cover lg:rounded-r-xl lg:rounded-l-none"
         />
       </div>
-      <div className="bg-hero-pattern bg-right-top  bg-contain  bg-no-repeat bg-orange text-center py-20 text-white px-6 md:rounded-xl md:py-16 md:rounded-t-none lg:max-w-[1111px] lg:mx-auto basis-3/5 lg:rounded-l-xl lg:rounded-r-none lg:flex flex-col justify-center lg:text-left lg:px-[90px]">
-        <h1 className="text-3xl mb-6 xl:text-5xl">{title}</h1>
-        <p className="text-sm leading-relaxed md:w-80 mx-auto lg:ml-0 xl:text-base xl:w-auto">
+      <div className="bg-hero-pattern bg-right-top  bg-contain  bg-no-repeat bg-orange text-center py-20 text-white px-6 md:rounded-xl md:py-16 md:rounded-t-none xl:max-w-[1111px] xl:mx-auto basis-3/5 lg:rounded-l-xl lg:rounded-r-none lg:flex flex-col justify-center lg:text-left lg:px-[90px]">
+        <h1 className="text-3xl mb-6 md:text-5xl xl:text-5xl">{title}</h1>
+        <p className="text-sm leading-relaxed  mx-auto lg:ml-0 xl:text-base xl:w-auto">
           {text}
         </p>
       </div>

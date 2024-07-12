@@ -28,7 +28,7 @@ const Company = () => {
       setIsSuccessfullySent(true);
       form.reset();
       setSending(false);
-      setSender(data.name);
+      setSender(data.name as string);
     } else {
       setSending(false);
       const errorText = await response.text();

@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { locations } from "@/constants/const";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
 import { FormEvent } from "react";
+import Form from "@/components/Form/Form";
 
 const Company = () => {
   const [isSuccessfullySent, setIsSuccessfullySent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sender, setSender] = useState<string | null>(null);
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -19,11 +22,15 @@ const Company = () => {
       },
       body: JSON.stringify(data),
     });
+    setSending(true);
 
     if (response.ok) {
       setIsSuccessfullySent(true);
       form.reset();
+      setSending(false);
+      setSender(data.name);
     } else {
+      setSending(false);
       const errorText = await response.text();
       console.error("Error:", errorText);
       alert("Failed to send message");
@@ -31,78 +38,12 @@ const Company = () => {
   }
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col bg-orange gap-4 px-6 text-white text-center py-12 bg-hero-pattern bg-contain bg-top bg-no-repeat md:mx-10 md:rounded-xl lg:flex-row lg:text-left lg:px-24 lg:gap-24 xl:w-[1111px] xl:mx-auto"
-      >
-        <div className="basis-1/2 lg:flex lg:flex-col justify-center">
-          <h1 className="text-center text-3xl mb-6 lg:text-left">Contact Us</h1>
-          <p className="text-base">
-            Ready to take it to the next level? Let’s talk about your project or
-            idea and find out how we can help your business grow. If you are
-            looking for unique digital experiences that’s relatable to your
-            users, drop us a line.
-          </p>
-        </div>
-
-        {!isSuccessfullySent ? (
-          <div className="basis-1/2">
-            <div className="w-full py-2 border-b flex justify-between gap-2">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="bg-transparent flex-grow"
-              />
-            </div>
-            <div className="w-full py-2 border-b flex justify-between gap-2">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="bg-transparent flex-grow"
-              />
-            </div>
-            <div className="w-full py-2 border-b flex justify-between gap-2">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                className="bg-transparent flex-grow"
-              />
-            </div>
-            <div className="w-full pt-2 pb-12 border-b flex justify-between gap-2">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                className="bg-transparent flex-grow"
-              />
-            </div>
-            {!isSuccessfullySent && (
-              <button
-                type="submit"
-                className="text-black bg-white w-40 block mx-auto py-3 rounded-lg mt-8 lg:mr-0 lg:ml-auto"
-              >
-                Submit
-              </button>
-            )}
-          </div>
-        ) : (
-          <p className="text-3xl">
-            Thank you for your message.
-            <br />
-            We will get back to you soon.
-          </p>
-        )}
-      </form>
+      <Form
+        handleSubmit={handleSubmit}
+        isSuccessfullySent={isSuccessfullySent}
+        sending={sending}
+        sender={sender}
+      />
       <section className="pt-32 md:mx-10 lg:flex justify-between xl:w-[1111px] xl:mx-auto">
         {locations.map((location) => (
           <IllustratedCard

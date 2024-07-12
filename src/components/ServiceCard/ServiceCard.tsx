@@ -24,7 +24,7 @@ const ServiceCard = ({ src, alt, title, text }: ServiceCardProps) => {
         />
       </div>
 
-      <div className="bg-[#FDF3F0] p-8 rounded-b-xl md:px-8 md:py-28  md:rounded-r-xl md:rounded-l-none md:pr-11 md:h-[320px] basis-1/2 lg:basis-auto lg:h-auto lg:py-8 lg:min-h-[200px] lg:rounded-s-xl lg:rounded-t-none group-hover:bg-orange group-hover:text-white transition-colors">
+      <div className="bg-[#FDF3F0] p-8 w-full rounded-b-xl md:px-8 md:py-28  md:rounded-r-xl md:rounded-l-none md:pr-11 md:h-[320px] basis-1/2 lg:basis-auto lg:h-auto lg:py-8 lg:min-h-[200px] lg:rounded-s-xl lg:rounded-t-none group-hover:bg-orange group-hover:text-white transition-colors">
         {" "}
         <h2 className="text-orange uppercase tracking-[5px] text-xl mb-4 group-hover:text-white transition-colors">
           {title}

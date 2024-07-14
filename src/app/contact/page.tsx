@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Head from "next/head";
 import { locations } from "@/constants/const";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
 import { FormEvent } from "react";
@@ -38,6 +39,13 @@ const Company = () => {
   }
   return (
     <div>
+      <Head>
+        <meta property="og:title" content="Contact Us | Designo" key="title" />
+        <meta
+          property="og:description"
+          content="A detailed description of your site or page for social sharing."
+        />
+      </Head>
       <Form
         handleSubmit={handleSubmit}
         isSuccessfullySent={isSuccessfullySent}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Head from "next/head";
 import Hero from "@/components/Hero/Hero";
 import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
@@ -7,6 +7,13 @@ import { services } from "@/constants/const";
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta property="og:title" content="My page title" key="title" />
+        <meta
+          property="og:description"
+          content="A detailed description of your site or page for social sharing."
+        />
+      </Head>
       <Hero />
       <section className="pt-28  px-4 mb-28 xl:w-[1111px] mx-auto xl:px-0 xl:grid grid-cols-2 grid-rows-2 gap-6 ">
         {services.map((item, index) => {

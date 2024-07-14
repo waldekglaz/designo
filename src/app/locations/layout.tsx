@@ -2,11 +2,11 @@ import React, { ReactNode } from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | Designo",
+  title: "Locations | Designo",
 };
 
-const ServicesLayout = ({ children }: { children: ReactNode }) => {
+const LocationLayout = ({ children }: { children: ReactNode }) => {
   return <div>{children}</div>;
 };
 
-export default ServicesLayout;
+export default LocationLayout;

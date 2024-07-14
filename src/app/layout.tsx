@@ -1,5 +1,5 @@
 "use client";
-import type { Metadata } from "next";
+
 import { Inter, Jost } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
@@ -9,12 +9,6 @@ import Footer from "@/components/Footer/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 const jost = Jost({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "Designo",
-//   description:
-//     "Designo is a multi-page website built with Next.js and Tailwind CSS.",
-// };
 
 export default function RootLayout({
   children,

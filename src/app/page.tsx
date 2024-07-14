@@ -3,6 +3,11 @@ import Hero from "@/components/Hero/Hero";
 import ProjectsCard from "@/components/ProjectsCard/ProjectsCard";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
 import { services } from "@/constants/const";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Designo",
+};
 
 export default function Home() {
   return (

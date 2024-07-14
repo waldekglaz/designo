@@ -7,6 +7,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Designo",
+  description:
+    "We are a creative group of people who design influential brands and digital experiences.",
 };
 
 export default function Home() {

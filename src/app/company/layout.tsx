@@ -3,6 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Designo",
+  description:
+    "We are a creative group of people who design influential brands and digital experiences.",
 };
 
 const CompanyLayout = ({ children }: { children: ReactNode }) => {

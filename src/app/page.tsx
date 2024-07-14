@@ -8,11 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta property="og:title" content="My page title" key="title" />
-        <meta
-          property="og:description"
-          content="A detailed description of your site or page for social sharing."
-        />
+        <title>Designo</title>
       </Head>
       <Hero />
       <section className="pt-28  px-4 mb-28 xl:w-[1111px] mx-auto xl:px-0 xl:grid grid-cols-2 grid-rows-2 gap-6 ">

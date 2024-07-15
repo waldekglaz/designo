@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Button from "../src/components/Button/Button";
+import Button from "./Button";
 
 describe("Button Component", () => {
   it("renders the button with the correct text and href", () => {

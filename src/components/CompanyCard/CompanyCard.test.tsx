@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import CompanyCard from "../src/components/CompanyCard/CompanyCard";
+import CompanyCard from "./CompanyCard";
 import "@testing-library/jest-dom";
 
 describe("CompanyCard", () => {
@@ -28,7 +28,9 @@ describe("CompanyCard", () => {
     render(<CompanyCard {...defaultProps} />);
     const image = screen.getByAltText(defaultProps.alt);
     // Check if the `src` attribute contains the expected image path
-    expect(image.src).toContain(encodeURIComponent(defaultProps.src));
+    expect((image as HTMLImageElement).src).toContain(
+      encodeURIComponent(defaultProps.src)
+    );
     expect(image).toHaveAttribute("alt", defaultProps.alt);
   });
 

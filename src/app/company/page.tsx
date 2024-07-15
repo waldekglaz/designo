@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { locations } from "@/constants/const";
 import IllustratedCard from "@/components/IllustratedCard/IllustratedCard";
 import HeroWithImage from "@/components/HeroWithImage/HeroWithImage";

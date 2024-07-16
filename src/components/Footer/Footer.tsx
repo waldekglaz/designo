@@ -5,23 +5,17 @@ import Link from "next/link";
 import FooterNavItem from "../FooterNavItem/FooterNavItem";
 import Socials from "../Socials/Socials";
 import Button from "../Button/Button";
+import Banner from "../Banner/Banner";
 
 const Footer = () => {
   return (
     <footer className="relative mt-56 xl:mt-80">
-      <div className="bg-footer-pattern bg-no-repeat bg-center bg-orange absolute top-[-20%] text-white py-10 px-4 text-center rounded-lg left-1/2 transform -translate-x-1/2 w-[90%] xl:w-[1111px] xl:flex items-center justify-between xl:text-left xl:py-20 xl:px-24 xl:top-[-40%]">
-        <div>
-          <h2 className="text-3xl mb-4 md:text-5xl md:max-w-[335px] md:mx-auto xl:ml-0">
-            Let's talk about your project
-          </h2>
-          <p className="text-sm leading-relaxed mb-6 md:text-base md:max-w-[520px] md:mx-auto">
-            Ready to take it to the next level? Contact us today and find out
-            how our expertise can help your business grow.
-          </p>
-        </div>
-
-        <Button text="Get in touch" href="/contact" />
-      </div>
+      <Banner
+        title="Let's talk about your project"
+        text="Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow."
+        btnText="Get in touch"
+        href="/contact"
+      />
       <div className="px-4 bg-[#1D1C1E] pt-60 pb-16 text-white text-center md:px-11 xl:px-40 xl:w-[1440px] xl:mx-auto">
         <Link href="/">
           <Image
